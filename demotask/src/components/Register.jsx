@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./register.css"
+import "./register.css";
 
-export default function Register({goToLogin}) {
+export default function Register({ goToLogin }) {
   const [formData, setFormData] = useState({
     username: "",
     email: "",
@@ -69,9 +69,8 @@ export default function Register({goToLogin}) {
       });
       sessionStorage.setItem("formData", JSON.stringify(formData));
       goToLogin();
-
     }
-  };
+  }
 
   return (
     <form onSubmit={handleSubmit}>
